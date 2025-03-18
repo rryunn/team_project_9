@@ -12,4 +12,11 @@ window.onload = function () {
   document.querySelectorAll('.amount').forEach((amount) => {
     amount.addEventListener('input', updateTotal);
   });
+
+  document.querySelectorAll('.remove').forEach((button) => {
+    button.addEventListener('click', function () {
+      this.parentElement.remove();
+      updateTotal();
+    });
+  });
 };
