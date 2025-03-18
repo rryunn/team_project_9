@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니</title>
+    <script src="../js/cart.js"></script>
+  </head>
+  <body>
+    <div class="cart-container">
+      <h2>장바구니</h2>
+      <div class="cart-item" data-price="10000">
+        <img />
+        <div>
+          <p>상품명 1</p>
+          <p>10,000원</p>
+        </div>
+        <input type="number" class="amount" value="1" min="1" />
+        <button class="remove">삭제</button>
+      </div>
+      <div class="cart-item" data-price="20000">
+        <img />
+        <div>
+          <p>상품명 2</p>
+          <p>20,000원</p>
+        </div>
+        <input type="number" class="amount" value="1" min="1" />
+        <button class="remove">삭제</button>
+      </div>
+    </div>
+    <h3>총 금액: <span id="total_price">30,000</span>원</h3>
+  </body>
+</html>
