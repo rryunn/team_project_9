@@ -32,8 +32,16 @@
         border-radius: 8px;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
       }
-      .product > p:nth-child(1) {
-        font-size: 18px;
+      .product > p:nth-of-type(1) {
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .product > p:nth-of-type(2) {
+        font-size: 15px;
+      }
+      p:nth-of-type(3) {
+        font-size: 15px;
+        color: rgb(160, 6, 6);
       }
       .product img {
         width: 100%;
@@ -44,8 +52,8 @@
   </head>
   <body>
     <header>
-      <div>상의</div>
-      <div>하의</div>
+      <button id="top-button">상의</button>
+      <button id="bottom-button">하의</button>
     </header>
 
     <section class="category">
@@ -150,4 +158,24 @@
       </div>
     </section>
   </body>
+
+  <script>
+    const topButton = document.getElementById('top-button');
+    const bottomButton = document.getElementById('bottom-button');
+
+    const topCategory = document.querySelector('.category:nth-of-type(1)');
+    const bottomCategory = document.querySelector('.category:nth-of-type(2)');
+
+    bottomCategory.style.display = 'none';
+
+    topButton.addEventListener('click', function () {
+      topCategory.style.display = 'block';
+      bottomCategory.style.display = 'none';
+    });
+
+    bottomButton.addEventListener('click', function () {
+      topCategory.style.display = 'none';
+      bottomCategory.style.display = 'block';
+    });
+  </script>
 </html>
